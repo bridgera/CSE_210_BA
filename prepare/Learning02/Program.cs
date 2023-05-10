@@ -28,6 +28,10 @@ namespace Learning02
 
             // Display Resume//
             bridgerResume.Display();
+            
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+            System.Environment.Exit(1);
 
 
         }
