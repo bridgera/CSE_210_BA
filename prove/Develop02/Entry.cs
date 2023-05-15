@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+
+
 namespace Develop02
 {
     ///<summary>
@@ -8,19 +12,9 @@ namespace Develop02
         public string response;
         public string date;
         
-        public string GetPrompt()
+        public string GetEntry()
         {
-            return prompt;
-        }
-
-        public string GetResponse()
-        {
-            return response;
-        }
-
-        public string GetDate()
-        {
-            return date;
+            return ($"Date: {date} - Prompt: {prompt}\n{response}");
         }
 
         public void StorePrompt(string prompt)
@@ -33,7 +27,7 @@ namespace Develop02
         }
         public void StoreDate(string date)
         {
-            this.date = date;
+            this.date = DateTime.Now.ToString("MM/dd/yyyy");
         }
 
 

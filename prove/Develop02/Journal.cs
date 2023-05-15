@@ -1,18 +1,21 @@
 using System.Collections.Generic;
+
 namespace Develop02
 {
-    ///<summary>
-    ///The responsibility of an Entry is to store a prompt, response, and date
-    ///</summary>
     public class Journal
     {
         public List<Entry> entries;
+        public string journalName;
 
         public Journal()
         {
             entries = new List<Entry>();
         }
 
+        public string GetJournalName()
+        {
+            return journalName;
+        }
         public List<Entry> GetEntries()
         {
             return entries;
@@ -24,6 +27,10 @@ namespace Develop02
             {
                 entries.Add(entry);
             }
+        }
+
+        public void StoreJournalName(string name){
+            journalName = name;
         }
     }
 }
